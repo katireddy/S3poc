@@ -16,4 +16,4 @@ jobs:
         aws-region: ap-south-1
         
     - name: copying files to s3 bucket
-      run: aws s3 cp ./source s3://balajibaludexter/ --recursive
+      run: aws s3 cp ./source s3://136912151821/ --recursive
