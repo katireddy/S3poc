@@ -10,12 +10,13 @@ jobs:
   copytoawss3bucket:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
     - name: configureawscredentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
        role-to-assume: arn:aws:iam::719814415405:role/github_action
        role-session-name: samplerolesession
        aws-region: ap-south-1
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: copying files to s3 bucket
       run: aws s3 cp ./source s3://136912151821/ --recursive
