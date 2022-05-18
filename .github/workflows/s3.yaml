@@ -14,7 +14,7 @@ jobs:
     - name: configureawscredentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-       role-to-assume: arn:aws:iam::719814415405:role/github_action
+       role-to-assume: arn:aws:iam::719814415405:role/git
        role-session-name: samplerolesession
        aws-region: ap-south-1
     - name: Checkout
